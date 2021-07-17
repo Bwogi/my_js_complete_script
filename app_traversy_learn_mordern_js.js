@@ -771,42 +771,50 @@ for(let x in user){
 //   console.log('NO');
 // }
 
+/* Use bootstrap alerts and not these... */
+
 let val;
 
-// Outter height and width
+// Outter height and width - from the top of the window to the bottom 
 val = window.outerHeight;
 val = window.outerWidth;
+// outer from the outer edges 
 
-// Inner height and width
+// Inner height and width - inside the scroll bars
 val = window.innerHeight;
 val = window.innerWidth;
 
-// Scroll points
-val = window.scrollY;
-val = window.scrollX;
+// Scroll points - to figure out where you are when you're scrolling
+/*
+	to activate scroll bars, add a div
+	<h1> JS Box with scrollbar</h1>
+	<div style="margin-top:1000px;"></div>
+*/
+val = window.scrollY; // vertical scroll 
+val = window.scrollX; // horizontal scroll
 
 // Location Object
-val = window.location;
-val = window.location.hostname;
-val = window.location.port;
-val = window.location.href;
-val = window.location.search;
+val = window.location; // the object
+val = window.location.hostname; // 127.0.0.1
+val = window.location.port; // 5500
+val = window.location.href; // http://127.0.0.1:5500/
+val = window.location.search; // ?id=1 // ?id=1&name=Andrew&member=standard
 
 // Redirect
-//window.location.href = 'http://google.com';
+//window.location.href = 'http://google.com'; // go to another website - google.com
 //Reload
-//window.location.reload();
+//window.location.reload(); //keeps on relaoding endlessly till you disable this function
 
 // History Object
 
-// window.history.go(-2);
-// val = window.history.length;
+// window.history.go(-2); // go back  2 sites 
+// val = window.history.length; // number of sites in the history
 
 // Navigator Object
 val = window.navigator;
 val = window.navigator.appName;
 val = window.navigator.appVersion;
-val = window.navigator.userAgent;
+val = window.navigator.userAgent; // browser being used
 val = window.navigator.platform;
 val = window.navigator.vendor;
 val = window.navigator.language;
@@ -816,3 +824,36 @@ val = window.navigator.language;
 console.log(val);
 
 /* WINDOW METHODS / OBJECTS / PROPERTIES END */
+
+
+
+/* GLOBAL SCOPE */ 
+var a = 1;
+let b = 2;
+const c = 3;
+
+// function test() {
+	/* these variables are in the function scope */
+//   var a = 4;
+//   let b = 5;
+//   const c = 6;
+//   console.log('Function Scope: ', a, b, c);
+// }
+
+// test();
+
+// if(true) {
+//   // Block Scope
+	//   var a = 4; // this value changes 
+//   let b = 5;
+//   const c = 6;
+//   console.log('If Scope: ', a, b, c);
+// }
+
+// for(var a = 0; a < 10; a++) {
+//   console.log(`Loop: ${a}`);
+// }
+
+console.log('Global Scope: ', a, b, c);
+
+/* GLOBAL SCOPE END */
