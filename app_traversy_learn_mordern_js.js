@@ -648,16 +648,21 @@ todo.delete();
 // for(let i = 0; i < 10; i++){
 //   if(i === 2){
 //     console.log('2 is my favorite number');
-//     continue;
+//     continue; // skip number 2's iteration and go to the next iteration
 //   }
 
 //   if(i === 5){
 //     console.log('Stop the loop');
-//     break;
+//     break; // it breaks out of the loop - stops the loop
 //   }
 
 //   console.log('Number '+ i);
 // }
+
+/* - GENERAL RULE OF THUMB
+	Use a for loop when you know how many times its gonna run
+	 Use a while loop when its unclear */
+
 
 // 2. WHILE LOOP
 
@@ -668,7 +673,7 @@ todo.delete();
 //   i++;
 // }
 
-// 3. DO WHILE
+// 3. DO WHILE - Its always gonna run atleast once
 
 // let i = 100;
 
@@ -678,6 +683,7 @@ todo.delete();
 // }
 
 // while(i < 10);
+ 
 
 // 4. LOOP THROUGH ARRAY
 const cars = ['Ford', 'Chevy', 'Honda', 'Toyota'];
@@ -686,19 +692,32 @@ const cars = ['Ford', 'Chevy', 'Honda', 'Toyota'];
 //   console.log(cars[i]);
 // }
 
-//5.  FOREACH
+//5.  FOREACH - takes in an anonymous function
+ 
+ /* Always use forEach() to loop through arrays */
+ 
+/* 
+// cars.forEach(function(){...})
+
+	 cars.forEach(function(car){
+		console.log(car);
+		});
+*/
+
 // cars.forEach(function(car, index, array){
 //   console.log(`${index} : ${car}`);
 //   console.log(array);
 // });
 
-// 6. MAP
-// const users  = [
+// 6. MAP - used to return a different array
+// const users  = [ // this is an array of objects of users
 //   {id: 1, name:'John'},
 //   {id: 2, name: 'Sara'},
 //   {id: 3, name: 'Karen'},
 //   {id: 4, name: 'Steve'}
 // ];
+
+/* to extract only ids from the array of objects and place them in an array */
 
 // const ids = users.map(function(user){
 //   return user.id;
@@ -707,7 +726,7 @@ const cars = ['Ford', 'Chevy', 'Honda', 'Toyota'];
 // console.log(ids);
 
 
-// 7. FOR IN LOOP
+// 7. FOR IN LOOP - often used in objects
 const user = {
   firstName: 'John', 
   lastName: 'Doe',
@@ -715,7 +734,85 @@ const user = {
 }
 
 for(let x in user){
-  console.log(`${x} : ${user[x]}`);
+	console.log(x); // x will give us the key
+}
+
+for(let x in user){
+	console.log(`${x} : ${user[x]}`); //we'll then get the key and the value - key value pairs
 }
 
 // GENERAL LOOPS - ITERATION END
+
+// ---
+
+/* WINDOW METHODS / OBJECTS / PROPERTIES
+
+	 - DOM is part of the WINDOW Object in client side JS- The Global Object
+	 - Window or the browser 
+
+	 - Server side JS(NodeJs), The computer System is your environment
+	 - Client side JS, the browser or WINDOW Object is your environment.
+	 - LocalStorage, The Fetch API, the Navigator which includes geolocation.
+	 - includes methods like alert, prompt and confirm and so much more 
+
+*/ 
+
+// Alert
+//alert('Hello World');
+
+// Prompt
+// const input = prompt();
+// alert(input);
+
+// Confirm
+// if(confirm('Are you sure')){
+//   console.log('YES');
+// } else {
+//   console.log('NO');
+// }
+
+let val;
+
+// Outter height and width
+val = window.outerHeight;
+val = window.outerWidth;
+
+// Inner height and width
+val = window.innerHeight;
+val = window.innerWidth;
+
+// Scroll points
+val = window.scrollY;
+val = window.scrollX;
+
+// Location Object
+val = window.location;
+val = window.location.hostname;
+val = window.location.port;
+val = window.location.href;
+val = window.location.search;
+
+// Redirect
+//window.location.href = 'http://google.com';
+//Reload
+//window.location.reload();
+
+// History Object
+
+// window.history.go(-2);
+// val = window.history.length;
+
+// Navigator Object
+val = window.navigator;
+val = window.navigator.appName;
+val = window.navigator.appVersion;
+val = window.navigator.userAgent;
+val = window.navigator.platform;
+val = window.navigator.vendor;
+val = window.navigator.language;
+
+
+
+console.log(val);
+
+/* WINDOW METHODS / OBJECTS / PROPERTIES END */
