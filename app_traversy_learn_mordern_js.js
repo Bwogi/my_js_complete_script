@@ -287,9 +287,9 @@ document.body.innerHTML = html;
 
 // ARRAYS AND ARRAY METHODS
 // Create some arrays
-const numbers = [43,56,33,23,44,36,5];
-const numbers2 = new Array(22,45,33,76,54);
-const fruit = ['Apple', 'Banana', 'Orange', 'Pear'];
+const numbers = [43,56,33,23,44,36,5]; // way one: of creating an array
+const numbers2 = new Array(22,45,33,76,54); // way two: using the array constructor
+const fruit = ['Apple', 'Banana', 'Orange', 'Pear']; // an array of strings
 const mixed = [22, 'Hello', true, undefined, null, {a:1, b:1}, new Date()];
 
 let val;
@@ -297,13 +297,16 @@ let val;
 // Get array length
 val = numbers.length;
 // Check if is array
-val = Array.isArray(numbers);
+val = Array.isArray(numbers); //check if something is an array or not. Used in DOM manipulation
 // Get single value
 val = numbers[3];
 val = numbers[0];
+
+// ** arrays are not immutable. We can modify them **
+
 // Insert into array
 numbers[2] = 100;
-// Find index of value
+// Find the index of a value say, 36
 val = numbers.indexOf(36);
 
 // MUTATING ARRAYS
@@ -324,25 +327,201 @@ val = numbers.indexOf(36);
 val = numbers.concat(numbers2);
 
 // Sorting arrays
-val = fruit.sort();
-// val = numbers.sort();
+val = fruit.sort(); // alphabetical order
+// val = numbers.sort(); // sorts by index
 
-// // Use the "compare function"
+// // Use the "compare function" to sort by value in ascending order
 // val = numbers.sort(function(x, y){
 //   return x - y;
 // });
 
-// // Reverse sort
+// // Reverse sort to sort by value in descending order
 // val = numbers.sort(function(x, y){
 //   return y - x;
 // });
 
-// Find
+// Find the first number under 50
 function over50(num){
   return num > 50;
 }
 
-val = numbers.find(over50);
+val = numbers.find(over50); // find the first number over 50
 
 console.log(numbers);
 console.log(val);
+
+// OBJECT LITERALS
+
+const person = {
+  firstName: 'Steve',
+  lastName: 'Smith',
+  age: 36,
+  email: 'steve@aol.com',
+  hobbies: ['music', 'sports'],
+  address: {
+    city: 'Miami',
+    state: 'FL'
+  },
+  getBirthYear: function(){
+	  return 2017 - this.age; // when you are inside an object, use 'this' to mean a value in this very object. Without it in the object it just wont work.
+  }
+}
+
+let val;
+
+val = person;
+// Get specific value
+val = person.firstName; // recommended way
+val = person['lastName']; // another way
+val = person.age;
+val = person.hobbies[1];
+val = person.address.state;
+val = person.address['city'];
+val = person.getBirthYear();
+
+console.log(val);
+
+const people = [
+  {name: 'John', age: 30},
+  {name: 'Mike', age: 23},
+  {name: 'Nancy', age: 40}
+];
+
+for(let i = 0; i < people.length; i++){
+  console.log(people[i].name);
+}
+
+
+
+// DATE OBJECT
+let val;
+
+const today = new Date();
+//if you want to do some stuff with strings
+val = today.toString();
+// how to change it to a different date
+
+// ** to re declare a variable, use 'let' and not 'const'   **
+let birthday = new Date('9-10-1981 11:25:00');
+birthday = new Date('September 10 1981');
+birthday = new Date('9/10/1981');
+
+val = today.getMonth(); // zero based. January is 0(zero)
+val = today.getDate();
+val = today.getDay(); // 4 is the numerical representation of wednesday from Sunday
+val = today.getFullYear();
+val = today.getHours();
+val = today.getMinutes();
+val = today.getSeconds();
+val = today.getMilliseconds();
+val = today.getTime(); // timestamp the number of seconds passed since January 1st 1970
+
+// Date manipulation
+birthday.setMonth(2); // 0 is Jan, 1 is Feb, 2is March
+birthday.setDate(12);
+birthday.setFullYear(1985);
+birthday.setHours(3);
+birthday.setMinutes(30);
+birthday.setSeconds(25);
+
+console.log(birthday);
+
+// CONDITIONALS
+
+// if(something){
+//   do something
+// } else {
+//   do something else
+// }
+
+const id = 100;
+
+// // EQUAL TO
+// if(id == 100){
+//   console.log('CORRECT');
+// } else {
+//   console.log('INCORRECT');
+// }
+
+// // NOT EQUAL TO
+// if(id != 101){
+//   console.log('CORRECT');
+// } else {
+//   console.log('INCORRECT');
+// }
+
+// // EQUAL TO VALUE & TYPE
+// if(id === 100){
+//   console.log('CORRECT');
+// } else {
+//   console.log('INCORRECT');
+// }
+
+// // EQUAL TO VALUE & TYPE
+// if(id !== 100){
+//   console.log('CORRECT');
+// } else {
+//   console.log('INCORRECT');
+// }
+
+// Test if undefined
+// if(typeof id !== 'undefined'){
+//   console.log(`The ID is ${id}`);
+// } else {
+//   console.log('NO ID');
+// }
+
+// GREATER OR LESS THAN
+// if(id <= 100){
+//   console.log('CORRECT');
+// } else {
+//   console.log('INCORRECT');
+// }
+
+// IF ELSE
+
+const color = 'yellow';
+
+// if(color === 'red'){
+//   console.log('Color is red');
+// } else if(color === 'blue'){
+//   console.log('Color is blue');
+// } else {
+//   console.log('Color is not red or blue');
+// }
+
+// LOGICAL OPERATORS
+
+const name = 'Steve';
+const age = 70;
+
+// AND &&
+if(age > 0 && age < 12){
+  console.log(`${name} is a child`);
+} else if(age >= 13 && age <= 19){
+  console.log(`${name} is a teenager`);
+} else {
+  console.log(`${name} is an adult`);
+}
+
+// OR ||
+if(age < 16 || age > 65){
+  console.log(`${name} can not run in race`);
+} else {
+  console.log(`${name} is registered for the race`);
+}
+
+// TERNARY OPERATOR
+console.log(id === 100 ? 'CORRECT' : 'INCORRECT');
+
+// WITHOUT BRACES
+if(id === 100)
+  console.log('CORRECT');
+else
+  console.log('INCORRECT');
+
+if(id === 100)
+  console.log('CORRECT');
+else
+  console.log('INCORRECT');
+
