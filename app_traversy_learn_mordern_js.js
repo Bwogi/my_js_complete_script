@@ -426,11 +426,13 @@ birthday.setSeconds(25);
 
 console.log(birthday);
 
-// CONDITIONALS
 
-// if(something){
+
+// IF STATEMENTS AND COMPARISON OPERATORS
+
+// if(something is true){
 //   do something
-// } else {
+// } else {  // or otherwise
 //   do something else
 // }
 
@@ -464,7 +466,7 @@ const id = 100;
 //   console.log('INCORRECT');
 // }
 
-// Test if undefined
+// Test a variable if it is not empty-if undefined- to avoid the 'undefined' response
 // if(typeof id !== 'undefined'){
 //   console.log(`The ID is ${id}`);
 // } else {
@@ -490,7 +492,7 @@ const color = 'yellow';
 //   console.log('Color is not red or blue');
 // }
 
-// LOGICAL OPERATORS
+// LOGICAL OPERATORS - used to test more than one condition
 
 const name = 'Steve';
 const age = 70;
@@ -525,3 +527,195 @@ if(id === 100)
 else
   console.log('INCORRECT');
 
+// IF STATEMENTS AND COMPARISON OPERATORS END
+
+
+
+// SWITCHES
+
+const color = 'yellow';
+
+switch(color){
+  case 'red':
+    console.log('Color is red');
+    break;
+  case 'blue':
+    console.log('Color is blue');
+    break;
+  default:
+    console.log('Color is not red or blue');
+    break;
+}
+
+let day;
+
+switch(new Date().getDay()){
+  case 0:
+    day = 'Sunday';
+    break;
+  case 1:
+    day = 'Monday';
+    break;
+  case 2:
+    day = 'Tuesday';
+    break;
+  case 3:
+    day = 'Wednesday';
+    break;
+  case 4:
+    day = 'Thursday';
+    break;
+  case 5:
+    day = 'Friday';
+    break;
+  case 6:
+    day = 'Saturday';
+    break;
+}
+
+console.log(`Today is ${day}`);
+
+// SWITCHES END
+
+
+// FUNCTIONS
+
+// 1. FUNCTION DECLARATIONS AND EXPRESSIONS
+
+function greet(firstName = 'John', lastName = 'Doe'){
+  // if(typeof firstName === 'undefined'){firstName = 'John'}
+  // if(typeof lastName === 'undefined'){lastName = 'Doe'}
+  //console.log('Hello');
+  return 'Hello ' + firstName + ' ' + lastName;
+}
+
+// console.log(greet());
+
+// 2. FUNCTION EXPRESIONS - placing a function in a variable
+
+const square = function(x = 3){ // here you have a name variable 'square' and an anonymous function
+  return x*x;
+}; // add a semi colon because this is basically a variable
+
+// console.log(square()); // answer is 9
+// console.log(square(8)); // answer is 64
+
+// 3. IMMIDIATLEY INVOKABLE FUNCTION EXPRESSIONS - IIFEs - these are functions you declare and run at the same time
+
+//we make the function an expression by putting it in parenthesis
+// (function(){...})();
+//we simply define an anonymous function inside parenthesis
+
+
+ (function(){
+   console.log('IIFE Ran..');
+ })();
+
+// very useful in certain design patterns for example module patterns
+ (function(name){
+   console.log('Hello '+ name);
+ })('Brad');
+
+
+// We can also put functions inside of objects. We then call them methods and not functions
+// PROPERTY METHODS
+
+const todo = {
+  add: function(){
+    console.log('Add todo..');
+  },
+  edit: function(id){
+    console.log(`Edit todo ${id}`);
+  }
+}
+
+// ad a method to the todo oject from outside of the object
+todo.delete = function(){
+  console.log('Delete todo...');
+}
+
+todo.add();
+todo.edit(22);
+todo.delete();
+
+// FUNCTION EXPRESIONS END
+
+
+// GENERAL LOOPS - ITERATION
+
+// 1. FOR LOOP
+
+// for(let i = 0; i < 10; i++){
+//   if(i === 2){
+//     console.log('2 is my favorite number');
+//     continue;
+//   }
+
+//   if(i === 5){
+//     console.log('Stop the loop');
+//     break;
+//   }
+
+//   console.log('Number '+ i);
+// }
+
+// 2. WHILE LOOP
+
+// let i = 0;
+
+// while(i < 10){
+//   console.log('Number ' + i);
+//   i++;
+// }
+
+// 3. DO WHILE
+
+// let i = 100;
+
+// do {
+//   console.log('Number ' + i);
+//   i++;
+// }
+
+// while(i < 10);
+
+// 4. LOOP THROUGH ARRAY
+const cars = ['Ford', 'Chevy', 'Honda', 'Toyota'];
+
+// for(let i = 0; i < cars.length; i++){
+//   console.log(cars[i]);
+// }
+
+//5.  FOREACH
+// cars.forEach(function(car, index, array){
+//   console.log(`${index} : ${car}`);
+//   console.log(array);
+// });
+
+// 6. MAP
+// const users  = [
+//   {id: 1, name:'John'},
+//   {id: 2, name: 'Sara'},
+//   {id: 3, name: 'Karen'},
+//   {id: 4, name: 'Steve'}
+// ];
+
+// const ids = users.map(function(user){
+//   return user.id;
+// });
+
+// console.log(ids);
+
+
+// 7. FOR IN LOOP
+const user = {
+  firstName: 'John', 
+  lastName: 'Doe',
+  age: 40
+}
+
+for(let x in user){
+  console.log(`${x} : ${user[x]}`);
+}
+
+// GENERAL LOOPS - ITERATION END
