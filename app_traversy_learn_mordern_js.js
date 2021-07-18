@@ -846,7 +846,7 @@ const c = 3;
 // test();
 
 // if(true) {
-//   // Block Scope
+// // Block Scope
 //   var a = 4; // this value changes the a in the global scope. The let and const variables don't.
 //   let b = 5;
 //   const c = 6;
@@ -871,36 +871,42 @@ console.log('Global Scope: ', a, b, c);
 let val;
 
 val = document;
-val = document.all;
-val = document.all[2];
-val = document.all.length;
-val = document.head;
-val = document.body;
-val = document.doctype;
-val = document.domain;
-val = document.URL;
-val = document.characterSet;
-val = document.contentType;
+val = document.all; // an entire html document collection
+val = document.all[2]; // 1 gives the head, 2 gives the meta tag and so on inside the document
+val = document.all.length; // gives the number of elements this html document has(43 in this case)
+val = document.head; // just the head
+val = document.body; // just the body
+val = document.doctype; // html doctype
+val = document.domain; // 127.0.0.1
+val = document.URL; // protocol, port and the page
+val = document.characterSet; // character set
+val = document.contentType; //content type
 
-val = document.forms;
-val = document.forms[0];
-val = document.forms[0].id;
-val = document.forms[0].method;
-val = document.forms[0].action;
+// selecting stuff without using selectors
+val = document.forms; // get all the forms on the page
+val = document.forms[0]; // its only one form so its index is 0
+val = document.forms[0].id; // access the id
+val = document.forms[0].method; // the methods GET and POST
+val = document.forms[0].action; // action
 
-val = document.links;
-val = document.links[0];
-val = document.links[0].id;
+val = document.links; // accessing all the links
+val = document.links[0]; // accessing particular links
+val = document.links[0].id; // and their properties
 val = document.links[0].className;
-val = document.links[0].classList[0];
+val = document.links[0].classList[0]; // collection of classes
 
-val = document.images;
+val = document.images; // select all images
 
-val = document.scripts;
-val = document.scripts[2].getAttribute('src');
+val = document.scripts; // all linked scripts
+val = document.scripts[2].getAttribute('src'); // define the links attributes
 
 let scripts = document.scripts;
 
+scripts.forEach(function(script) {
+    console.log(script);
+}); // will give a Type error
+
+// should do it this way insted
 let scriptsArr = Array.from(scripts);
 
 scriptsArr.forEach(function(script) {
