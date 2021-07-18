@@ -6,20 +6,20 @@ console.log(123);
 console.log(true);
 var greeting = 'Hello';
 console.log(greeting);
-console.log([1,2,3,4]); // array
-console.log({a:1, b:2}); // object
-console.table({a:1, b:2}); // console.table(object)
+console.log([1, 2, 3, 4]); // array
+console.log({ a: 1, b: 2 }); // object
+console.table({ a: 1, b: 2 }); // console.table(object)
 
 console.error('This is some error');
 console.clear();
 console.warn('This is a warning');
 console.time('Hello');
-  console.log('Hello World');
-  console.log('Hello World');
-  console.log('Hello World');
-  console.log('Hello World');
-  console.log('Hello World');
-  console.log('Hello World');
+console.log('Hello World');
+console.log('Hello World');
+console.log('Hello World');
+console.log('Hello World');
+console.log('Hello World');
+console.log('Hello World');
 console.timeEnd('Hello');
 /*
   multi
@@ -69,8 +69,8 @@ console.timeEnd('Hello');
 // const greeting;
 
 const person = {
-  name: 'John',
-  age: 30
+    name: 'John',
+    age: 30
 }
 
 person.name = 'Sara';
@@ -78,7 +78,7 @@ person.age = 32;
 
 // console.log(person);
 
-const numbers = [1,2,3,4,5];
+const numbers = [1, 2, 3, 4, 5];
 numbers.push(6);
 
 console.log(numbers);
@@ -105,8 +105,8 @@ const sym = Symbol();
 const hobbies = ['movies', 'music'];
 // Object literal
 const address = {
-  city: 'Boston',
-  state: 'MA'
+    city: 'Boston',
+    state: 'MA'
 }
 const today = new Date();
 console.log(today);
@@ -117,13 +117,13 @@ let val;
 
 // Number to string
 val = String(555);
-val = String(4+4);
+val = String(4 + 4);
 // Bool to string
 val = String(true);
 // Date to string
 val = String(new Date());
 // Array to string
-val = String([1,2,3,4]);
+val = String([1, 2, 3, 4]);
 
 // toString()
 val = (5).toString();
@@ -135,7 +135,7 @@ val = Number(true);
 val = Number(false);
 val = Number(null);
 val = Number('hello');
-val = Number([1,2,3]);
+val = Number([1, 2, 3]);
 
 val = parseInt('100.30');
 val = parseFloat('100.30');
@@ -176,8 +176,8 @@ val = Math.floor(2.8);
 val = Math.sqrt(64);
 val = Math.abs(-3);
 val = Math.pow(8, 2);
-val = Math.min(2,33,4,1,55,6,3,-2);
-val = Math.max(2,33,4,1,55,6,3,-2);
+val = Math.min(2, 33, 4, 1, 55, 6, 3, -2);
+val = Math.max(2, 33, 4, 1, 55, 6, 3, -2);
 val = Math.random();
 
 val = Math.floor(Math.random() * 20 + 1);
@@ -207,7 +207,7 @@ val += 'Traversy';
 val = 'Hello, my name is ' + firstName + ' and I am ' + age;
 
 // Escaping
-val =  'That\'s awesome, I can\'t wait';
+val = 'That\'s awesome, I can\'t wait';
 
 // Length
 val = firstName.length;
@@ -234,7 +234,7 @@ val = firstName.charAt(firstName.length - 1); //entire length minus 1
 val = firstName.substring(0, 4); // pull a substring out of a string
 
 // slice()
-val = firstName.slice(0,4); // does the same as above but is mostly used with arrays
+val = firstName.slice(0, 4); // does the same as above but is mostly used with arrays
 val = firstName.slice(-3); // used to pull out things from the array (-3 characters from the back)
 
 // split()
@@ -257,17 +257,17 @@ const city = 'Miami';
 let html;
 
 // Without template strings (es5)
-html = '<ul><li>Name: ' + name + '</li><li>Age: ' + age + ' </li><li>Job: '+ job+ ' </li><li>City: '+ city +' </li></ul>';
+html = '<ul><li>Name: ' + name + '</li><li>Age: ' + age + ' </li><li>Job: ' + job + ' </li><li>City: ' + city + ' </li></ul>';
 
 html = '<ul>' +
-       '<li>Name: ' + name + '</li>' +
-       '<li>Age: ' + age + '</li>' +
-       '<li>Job: ' + job + '</li>' +
-       '<li>City: ' + city + '</li>' +
-       '</ul>';
+    '<li>Name: ' + name + '</li>' +
+    '<li>Age: ' + age + '</li>' +
+    '<li>Job: ' + job + '</li>' +
+    '<li>City: ' + city + '</li>' +
+    '</ul>';
 
-function hello(){
-  return 'hello';
+function hello() {
+    return 'hello';
 }
 
 // With template strings (es6)
@@ -287,10 +287,10 @@ document.body.innerHTML = html;
 
 // ARRAYS AND ARRAY METHODS
 // Create some arrays
-const numbers = [43,56,33,23,44,36,5]; // way one: of creating an array
-const numbers2 = new Array(22,45,33,76,54); // way two: using the array constructor
+const numbers = [43, 56, 33, 23, 44, 36, 5]; // way one: of creating an array
+const numbers2 = new Array(22, 45, 33, 76, 54); // way two: using the array constructor
 const fruit = ['Apple', 'Banana', 'Orange', 'Pear']; // an array of strings
-const mixed = [22, 'Hello', true, undefined, null, {a:1, b:1}, new Date()];
+const mixed = [22, 'Hello', true, undefined, null, { a: 1, b: 1 }, new Date()];
 
 let val;
 
@@ -341,8 +341,8 @@ val = fruit.sort(); // alphabetical order
 // });
 
 // Find the first number under 50
-function over50(num){
-  return num > 50;
+function over50(num) {
+    return num > 50;
 }
 
 val = numbers.find(over50); // find the first number over 50
@@ -353,18 +353,18 @@ console.log(val);
 // OBJECT LITERALS
 
 const person = {
-  firstName: 'Steve',
-  lastName: 'Smith',
-  age: 36,
-  email: 'steve@aol.com',
-  hobbies: ['music', 'sports'],
-  address: {
-    city: 'Miami',
-    state: 'FL'
-  },
-  getBirthYear: function(){
-	  return 2017 - this.age; // when you are inside an object, use 'this' to mean a value in this very object. Without it in the object it just wont work.
-  }
+    firstName: 'Steve',
+    lastName: 'Smith',
+    age: 36,
+    email: 'steve@aol.com',
+    hobbies: ['music', 'sports'],
+    address: {
+        city: 'Miami',
+        state: 'FL'
+    },
+    getBirthYear: function() {
+        return 2017 - this.age; // when you are inside an object, use 'this' to mean a value in this very object. Without it in the object it just wont work.
+    }
 }
 
 let val;
@@ -382,13 +382,13 @@ val = person.getBirthYear();
 console.log(val);
 
 const people = [
-  {name: 'John', age: 30},
-  {name: 'Mike', age: 23},
-  {name: 'Nancy', age: 40}
+    { name: 'John', age: 30 },
+    { name: 'Mike', age: 23 },
+    { name: 'Nancy', age: 40 }
 ];
 
-for(let i = 0; i < people.length; i++){
-  console.log(people[i].name);
+for (let i = 0; i < people.length; i++) {
+    console.log(people[i].name);
 }
 
 
@@ -498,34 +498,34 @@ const name = 'Steve';
 const age = 70;
 
 // AND &&
-if(age > 0 && age < 12){
-  console.log(`${name} is a child`);
-} else if(age >= 13 && age <= 19){
-  console.log(`${name} is a teenager`);
+if (age > 0 && age < 12) {
+    console.log(`${name} is a child`);
+} else if (age >= 13 && age <= 19) {
+    console.log(`${name} is a teenager`);
 } else {
-  console.log(`${name} is an adult`);
+    console.log(`${name} is an adult`);
 }
 
 // OR ||
-if(age < 16 || age > 65){
-  console.log(`${name} can not run in race`);
+if (age < 16 || age > 65) {
+    console.log(`${name} can not run in race`);
 } else {
-  console.log(`${name} is registered for the race`);
+    console.log(`${name} is registered for the race`);
 }
 
 // TERNARY OPERATOR
 console.log(id === 100 ? 'CORRECT' : 'INCORRECT');
 
 // WITHOUT BRACES
-if(id === 100)
-  console.log('CORRECT');
+if (id === 100)
+    console.log('CORRECT');
 else
-  console.log('INCORRECT');
+    console.log('INCORRECT');
 
-if(id === 100)
-  console.log('CORRECT');
+if (id === 100)
+    console.log('CORRECT');
 else
-  console.log('INCORRECT');
+    console.log('INCORRECT');
 
 // IF STATEMENTS AND COMPARISON OPERATORS END
 
@@ -535,42 +535,42 @@ else
 
 const color = 'yellow';
 
-switch(color){
-  case 'red':
-    console.log('Color is red');
-    break;
-  case 'blue':
-    console.log('Color is blue');
-    break;
-  default:
-    console.log('Color is not red or blue');
-    break;
+switch (color) {
+    case 'red':
+        console.log('Color is red');
+        break;
+    case 'blue':
+        console.log('Color is blue');
+        break;
+    default:
+        console.log('Color is not red or blue');
+        break;
 }
 
 let day;
 
-switch(new Date().getDay()){
-  case 0:
-    day = 'Sunday';
-    break;
-  case 1:
-    day = 'Monday';
-    break;
-  case 2:
-    day = 'Tuesday';
-    break;
-  case 3:
-    day = 'Wednesday';
-    break;
-  case 4:
-    day = 'Thursday';
-    break;
-  case 5:
-    day = 'Friday';
-    break;
-  case 6:
-    day = 'Saturday';
-    break;
+switch (new Date().getDay()) {
+    case 0:
+        day = 'Sunday';
+        break;
+    case 1:
+        day = 'Monday';
+        break;
+    case 2:
+        day = 'Tuesday';
+        break;
+    case 3:
+        day = 'Wednesday';
+        break;
+    case 4:
+        day = 'Thursday';
+        break;
+    case 5:
+        day = 'Friday';
+        break;
+    case 6:
+        day = 'Saturday';
+        break;
 }
 
 console.log(`Today is ${day}`);
@@ -582,19 +582,19 @@ console.log(`Today is ${day}`);
 
 // 1. FUNCTION DECLARATIONS AND EXPRESSIONS
 
-function greet(firstName = 'John', lastName = 'Doe'){
-  // if(typeof firstName === 'undefined'){firstName = 'John'}
-  // if(typeof lastName === 'undefined'){lastName = 'Doe'}
-  //console.log('Hello');
-  return 'Hello ' + firstName + ' ' + lastName;
+function greet(firstName = 'John', lastName = 'Doe') {
+    // if(typeof firstName === 'undefined'){firstName = 'John'}
+    // if(typeof lastName === 'undefined'){lastName = 'Doe'}
+    //console.log('Hello');
+    return 'Hello ' + firstName + ' ' + lastName;
 }
 
 // console.log(greet());
 
 // 2. FUNCTION EXPRESIONS - placing a function in a variable
 
-const square = function(x = 3){ // here you have a name variable 'square' and an anonymous function
-  return x*x;
+const square = function(x = 3) { // here you have a name variable 'square' and an anonymous function
+    return x * x;
 }; // add a semi colon because this is basically a variable
 
 // console.log(square()); // answer is 9
@@ -607,31 +607,31 @@ const square = function(x = 3){ // here you have a name variable 'square' and an
 //we simply define an anonymous function inside parenthesis
 
 
- (function(){
-   console.log('IIFE Ran..');
- })();
+(function() {
+    console.log('IIFE Ran..');
+})();
 
 // very useful in certain design patterns for example module patterns
- (function(name){
-   console.log('Hello '+ name);
- })('Brad');
+(function(name) {
+    console.log('Hello ' + name);
+})('Brad');
 
 
 // We can also put functions inside of objects. We then call them methods and not functions
 // PROPERTY METHODS
 
 const todo = {
-  add: function(){
-    console.log('Add todo..');
-  },
-  edit: function(id){
-    console.log(`Edit todo ${id}`);
-  }
+    add: function() {
+        console.log('Add todo..');
+    },
+    edit: function(id) {
+        console.log(`Edit todo ${id}`);
+    }
 }
 
 // ad a method to the todo oject from outside of the object
-todo.delete = function(){
-  console.log('Delete todo...');
+todo.delete = function() {
+    console.log('Delete todo...');
 }
 
 todo.add();
@@ -683,7 +683,7 @@ todo.delete();
 // }
 
 // while(i < 10);
- 
+
 
 // 4. LOOP THROUGH ARRAY
 const cars = ['Ford', 'Chevy', 'Honda', 'Toyota'];
@@ -693,9 +693,9 @@ const cars = ['Ford', 'Chevy', 'Honda', 'Toyota'];
 // }
 
 //5.  FOREACH - takes in an anonymous function
- 
- /* Always use forEach() to loop through arrays */
- 
+
+/* Always use forEach() to loop through arrays */
+
 /* 
 // cars.forEach(function(){...})
 
@@ -728,17 +728,17 @@ const cars = ['Ford', 'Chevy', 'Honda', 'Toyota'];
 
 // 7. FOR IN LOOP - often used in objects
 const user = {
-  firstName: 'John', 
-  lastName: 'Doe',
-  age: 40
+    firstName: 'John',
+    lastName: 'Doe',
+    age: 40
 }
 
-for(let x in user){
-	console.log(x); // x will give us the key
+for (let x in user) {
+    console.log(x); // x will give us the key
 }
 
-for(let x in user){
-	console.log(`${x} : ${user[x]}`); //we'll then get the key and the value - key value pairs
+for (let x in user) {
+    console.log(`${x} : ${user[x]}`); //we'll then get the key and the value - key value pairs
 }
 
 // GENERAL LOOPS - ITERATION END
@@ -755,7 +755,7 @@ for(let x in user){
 	 - LocalStorage, The Fetch API, the Navigator which includes geolocation.
 	 - includes methods like alert, prompt and confirm and so much more 
 
-*/ 
+*/
 
 // Alert
 //alert('Hello World');
@@ -771,42 +771,50 @@ for(let x in user){
 //   console.log('NO');
 // }
 
+/* Use bootstrap alerts and not these... */
+
 let val;
 
-// Outter height and width
+// Outter height and width - from the top of the window to the bottom 
 val = window.outerHeight;
 val = window.outerWidth;
+// outer from the outer edges 
 
-// Inner height and width
+// Inner height and width - inside the scroll bars
 val = window.innerHeight;
 val = window.innerWidth;
 
-// Scroll points
-val = window.scrollY;
-val = window.scrollX;
+// Scroll points - to figure out where you are when you're scrolling
+/*
+	to activate scroll bars, add a div
+	<h1> JS Box with scrollbar</h1>
+	<div style="margin-top:1000px;"></div>
+*/
+val = window.scrollY; // vertical scroll 
+val = window.scrollX; // horizontal scroll
 
 // Location Object
-val = window.location;
-val = window.location.hostname;
-val = window.location.port;
-val = window.location.href;
-val = window.location.search;
+val = window.location; // the object
+val = window.location.hostname; // 127.0.0.1
+val = window.location.port; // 5500
+val = window.location.href; // http://127.0.0.1:5500/
+val = window.location.search; // ?id=1 // ?id=1&name=Andrew&member=standard
 
 // Redirect
-//window.location.href = 'http://google.com';
+//window.location.href = 'http://google.com'; // go to another website - google.com
 //Reload
-//window.location.reload();
+//window.location.reload(); //keeps on relaoding endlessly till you disable this function
 
 // History Object
 
-// window.history.go(-2);
-// val = window.history.length;
+// window.history.go(-2); // go back  2 sites 
+// val = window.history.length; // number of sites in the history
 
 // Navigator Object
 val = window.navigator;
 val = window.navigator.appName;
 val = window.navigator.appVersion;
-val = window.navigator.userAgent;
+val = window.navigator.userAgent; // browser being used
 val = window.navigator.platform;
 val = window.navigator.vendor;
 val = window.navigator.language;
@@ -816,3 +824,567 @@ val = window.navigator.language;
 console.log(val);
 
 /* WINDOW METHODS / OBJECTS / PROPERTIES END */
+
+
+
+/* GLOBAL SCOPE WITH 'let' AND 'const'
+
+  Why 'var' should not be used */
+
+var a = 1;
+let b = 2;
+const c = 3;
+
+// function test() {
+/* these variables are in the function scope */
+//   var a = 4;
+//   let b = 5;
+//   const c = 6;
+//   console.log('Function Scope: ', a, b, c);
+// }
+
+// test();
+
+// if(true) {
+//   // Block Scope
+//   var a = 4; // this value changes the a in the global scope. The let and const variables don't.
+//   let b = 5;
+//   const c = 6;
+//   console.log('If Scope: ', a, b, c);
+// }
+
+// for(var a = 0; a < 10; a++) {
+//   console.log(`Loop: ${a}`);
+// }
+
+console.log('Global Scope: ', a, b, c);
+
+/* GLOBAL SCOPE END */
+
+
+
+
+/* Section 3: DOM Manipulation & Events */
+
+/* Examination of the Document Object */
+
+let val;
+
+val = document;
+val = document.all;
+val = document.all[2];
+val = document.all.length;
+val = document.head;
+val = document.body;
+val = document.doctype;
+val = document.domain;
+val = document.URL;
+val = document.characterSet;
+val = document.contentType;
+
+val = document.forms;
+val = document.forms[0];
+val = document.forms[0].id;
+val = document.forms[0].method;
+val = document.forms[0].action;
+
+val = document.links;
+val = document.links[0];
+val = document.links[0].id;
+val = document.links[0].className;
+val = document.links[0].classList[0];
+
+val = document.images;
+
+val = document.scripts;
+val = document.scripts[2].getAttribute('src');
+
+let scripts = document.scripts;
+
+let scriptsArr = Array.from(scripts);
+
+scriptsArr.forEach(function(script) {
+    console.log(script.getAttribute('src'));
+});
+
+console.log(val);
+/* Examination of the Document Object End */
+
+
+/* DOM Selectors for single elements */
+
+// document.getElementById()
+
+// console.log(document.getElementById('task-title'));
+
+// // Get things from the element
+// console.log(document.getElementById('task-title').id);
+// console.log(document.getElementById('task-title').className);
+
+// const taskTitle = document.getElementById('task-title');
+
+// // Change styling
+// taskTitle.style.background = '#333';
+// taskTitle.style.color = '#fff';
+// taskTitle.style.padding = '5px';
+// // taskTitle.style.display = 'none';
+
+// // Change content
+// taskTitle.textContent = 'Task List';
+// taskTitle.innerText = 'My Tasks';
+// taskTitle.innerHTML = '<span style="color:red">Task List</span>';
+
+// document.querySelector()
+
+console.log(document.querySelector('#task-title'));
+console.log(document.querySelector('.card-title'));
+console.log(document.querySelector('h5'));
+
+document.querySelector('li').style.color = 'red';
+document.querySelector('ul li').style.color = 'blue';
+
+document.querySelector('li:last-child').style.color = 'red';
+document.querySelector('li:nth-child(3)').style.color = 'yellow';
+document.querySelector('li:nth-child(4)').textContent = 'Hello World';
+document.querySelector('li:nth-child(odd)').style.background = '#ccc';
+document.querySelector('li:nth-child(even)').style.background = '#f4f4f4';
+
+/* DOM Selectors for single elements End */
+
+// --
+
+/* DOM Selectors for multiple elements */
+
+// document.getElementsByClassName
+
+// const items = document.getElementsByClassName('collection-item');
+// console.log(items);
+// console.log(items[0]);
+// items[0].style.color = 'red';
+// items[3].textContent = 'Hello';
+
+// const listItems = document.querySelector('ul').getElementsByClassName('collection-item');
+
+// console.log(listItems);
+
+// document.getElementsByTagName
+// let lis = document.getElementsByTagName('li');
+// console.log(lis);
+// console.log(lis[0]);
+// lis[0].style.color = 'red';
+// lis[3].textContent = 'Hello';
+
+// // Conver HTML Collection into array
+// lis = Array.from(lis);
+
+// lis.reverse();
+
+// lis.forEach(function(li, index){
+//   console.log(li.className);
+//   li.textContent = `${index}: Hello`;
+// });
+
+// console.log(lis);
+
+// document.querySelectorAll
+const items = document.querySelectorAll('ul.collection li.collection-item');
+
+items.forEach(function(item, index) {
+    item.textContent = `${index}: Hello`;
+});
+
+const liOdd = document.querySelectorAll('li:nth-child(odd)');
+const liEven = document.querySelectorAll('li:nth-child(even)');
+
+liOdd.forEach(function(li, index) {
+    li.style.background = '#ccc';
+});
+
+for (let i = 0; i < liEven.length; i++) {
+    liEven[i].style.background = '#f4f4f4';
+}
+
+
+console.log(items);
+
+
+/* DOM Selectors for multiple elements End */
+
+// --
+
+/* Traversing the DOM */
+
+let val;
+
+const list = document.querySelector('ul.collection');
+const listItem = document.querySelector('li.collection-item:first-child');
+
+val = listItem;
+val = list;
+
+// Get child nodes
+val = list.childNodes;
+val = list.childNodes[0];
+val = list.childNodes[0].nodeName;
+val = list.childNodes[3].nodeType;
+
+// 1 - Element
+// 2 - Attribute (deprecated)
+// 3 - Text node
+// 8 - Comment
+// 9 - Document itself
+// 10 - Doctype
+
+
+// Get children element nodes
+val = list.children;
+val = list.children[1];
+list.children[1].textContent = 'Hello';
+// Children of children
+list.children[3].children[0].id = 'test-link';
+val = list.children[3].children[0];
+
+// First child
+val = list.firstChild;
+val = list.firstElementChild;
+
+// Last child
+val = list.lastChild;
+val = list.lastElementChild;
+
+// Count child elements
+val = list.childElementCount;
+
+// Get parent node
+val = listItem.parentNode;
+val = listItem.parentElement;
+val = listItem.parentElement.parentElement;
+
+// Get next sibling
+val = listItem.nextSibling;
+val = listItem.nextElementSibling.nextElementSibling.previousElementSibling;
+
+// Get prev sibling
+val = listItem.previousSibling;
+val = listItem.previousElementSibling;
+console.log(val);
+
+/* Traversing the DOM End */
+
+// --
+
+/* Creating the elements */
+
+// Create element
+const li = document.createElement('li');
+
+// Add class
+li.className = 'collection-item';
+
+// Add id
+li.id = 'new-item';
+
+// Add attribute
+li.setAttribute('title', 'New Item');
+
+// Create text node and append
+li.appendChild(document.createTextNode('Hello World'));
+
+// Create new link element
+const link = document.createElement('a');
+// Add classes
+link.className = 'delete-item secondary-content';
+// Add icon html
+link.innerHTML = '<i class="fa fa-remove"></i>';
+
+// Append link into li
+li.appendChild(link);
+
+// Append li as child to ul
+document.querySelector('ul.collection').appendChild(li);
+
+console.log(li);
+
+/* Creating the elements End */
+
+// --
+
+/* Removing and replacing elements */
+
+// REPLACE ELEMENT
+
+// Create Element
+const newHeading = document.createElement('h2');
+// Add id
+newHeading.id = 'task-title';
+// New text node
+newHeading.appendChild(document.createTextNode('Task List'));
+
+// Get the old heading
+const oldHeading = document.getElementById('task-title');
+//Parent
+const cardAction = document.querySelector('.card-action');
+
+// Replace
+cardAction.replaceChild(newHeading, oldHeading);
+
+// REMOVE ELEMENT
+const lis = document.querySelectorAll('li');
+const list = document.querySelector('ul');
+
+// Remove list item
+lis[0].remove();
+
+// Remove child element
+list.removeChild(lis[3]);
+
+// CLASSES & ATTR
+const firstLi = document.querySelector('li:first-child');
+const link = firstLi.children[0];
+
+let val;
+
+// Classes
+val = link.className;
+val = link.classList;
+val = link.classList[0];
+link.classList.add('test');
+link.classList.remove('test');
+val = link;
+
+// Attributes
+val = link.getAttribute('href');
+val = link.setAttribute('href', 'http://google.com');
+link.setAttribute('title', 'Google');
+val = link.hasAttribute('title');
+link.removeAttribute('title');
+val = link;
+
+console.log(val);
+
+
+/* Removing and replacing elements End */
+
+// --
+
+/* Event listeners and the event object */
+
+// document.querySelector('.clear-tasks').addEventListener('click', function(e){
+//   console.log('Hello World');
+
+//   //e.preventDefault();
+// });
+
+document.querySelector('.clear-tasks').addEventListener('click', onClick);
+
+function onClick(e) {
+    //console.log('Clicked');
+
+    let val;
+
+    val = e;
+
+    // Event target element
+    val = e.target;
+    val = e.target.id;
+    val = e.target.className;
+    val = e.target.classList;
+
+    // Event type
+    val = e.type;
+
+    // Timestamp
+    val = e.timeStamp;
+
+    // Coords event relative to the window
+    val = e.clientY;
+    val = e.clientX;
+
+    // Coords event relative to the element
+    val = e.offsetY;
+    val = e.offsetX;
+
+    console.log(val);
+}
+/* Event listeners and the event object End */
+
+// --
+
+/* Mouse events */
+
+const clearBtn = document.querySelector('.clear-tasks');
+const card = document.querySelector('.card');
+const heading = document.querySelector('h5');
+
+// Click
+// clearBtn.addEventListener('click', runEvent);
+// Doubleclick
+// clearBtn.addEventListener('dblclick', runEvent);
+// Mousedown
+// clearBtn.addEventListener('mousedown', runEvent);
+// Mouseup
+// clearBtn.addEventListener('mouseup', runEvent);
+// Mouseenter
+// card.addEventListener('mouseenter', runEvent);
+// Mouseleave
+// card.addEventListener('mouseleave', runEvent);
+// Mouseover
+// card.addEventListener('mouseover', runEvent);
+// Mouseout
+// card.addEventListener('mouseout', runEvent);
+// Mousemove
+card.addEventListener('mousemove', runEvent);
+
+// Event Handler
+function runEvent(e) {
+    console.log(`EVENT TYPE: ${e.type}`);
+
+    heading.textContent = `MouseX: ${e.offsetX} MouseY: ${e.offsetY}`;
+
+    document.body.style.backgroundColor = `rgb(${e.offsetX}, ${e.offsetY}, 40)`;
+}
+
+/* Mouse events End */
+
+// --
+
+/* Keyboard and Input events */
+
+const form = document.querySelector('form');
+const taskInput = document.getElementById('task');
+const heading = document.querySelector('h5');
+const select = document.querySelector('select');
+
+// Clear input
+taskInput.value = '';
+
+// form.addEventListener('submit', runEvent);
+
+// Keydown
+//taskInput.addEventListener('keydown', runEvent);
+// Keydown
+// taskInput.addEventListener('keyup', runEvent);
+// Keypress
+// taskInput.addEventListener('keypress', runEvent);
+// Focus
+// taskInput.addEventListener('focus', runEvent);
+// Blur
+// taskInput.addEventListener('blur', runEvent);
+// Cut
+// taskInput.addEventListener('cut', runEvent);
+// Paste
+// taskInput.addEventListener('paste', runEvent);
+// Input
+// taskInput.addEventListener('input', runEvent);
+// Change
+select.addEventListener('change', runEvent);
+
+function runEvent(e) {
+    console.log(`EVENT TYPE: ${e.type}`);
+
+    //console.log(e.target.value);
+
+    // heading.innerText = e.target.value;
+
+    // Get input value
+    // console.log(taskInput.value);
+
+    // e.preventDefault();
+}
+/* Keyboard and Input events End */
+
+// --
+
+/* Event bubbling and delegation */
+
+// EVENT BUBBLING
+
+// document.querySelector('.card-title').addEventListener('click', function(){
+//   console.log('card title');
+// });
+
+// document.querySelector('.card-content').addEventListener('click', function(){
+//   console.log('card content');
+// });
+
+// document.querySelector('.card').addEventListener('click', function(){
+//   console.log('card');
+// });
+
+// document.querySelector('.col').addEventListener('click', function(){
+//   console.log('col');
+// });
+
+// EVENT DELGATION
+
+// const delItem = document.querySelector('.delete-item');
+
+// delItem.addEventListener('click', deleteItem);
+
+document.body.addEventListener('click', deleteItem);
+
+function deleteItem(e) {
+    // if(e.target.parentElement.className === 'delete-item secondary-content'){
+    //   console.log('delete item');
+    // }
+
+    if (e.target.parentElement.classList.contains('delete-item')) {
+        console.log('delete item');
+        e.target.parentElement.parentElement.remove();
+    }
+}
+/* Event bubbling and delegation End */
+
+// --
+
+/* Local and session storage */
+
+// set local storage item
+// localStorage.setItem('name', 'John');
+// localStorage.setItem('age', '30');
+
+// set session storage item
+// sessionStorage.setItem('name', 'Beth');
+
+// remove from storage
+// localStorage.removeItem('name');
+
+// get from storage
+// const name = localStorage.getItem('name');
+// const age = localStorage.getItem('age');
+
+// // clear local storage
+// localStorage.clear();
+
+// console.log(name, age);
+
+document.querySelector('form').addEventListener('submit', function(e) {
+    const task = document.getElementById('task').value;
+
+    let tasks;
+
+    if (localStorage.getItem('tasks') === null) {
+        tasks = [];
+    } else {
+        tasks = JSON.parse(localStorage.getItem('tasks'));
+    }
+
+    tasks.push(task);
+
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+
+    alert('Task saved');
+
+    e.preventDefault();
+});
+
+const tasks = JSON.parse(localStorage.getItem('tasks'));
+
+tasks.forEach(function(task) {
+    console.log(task);
+});
+
+/* Local and session storage End */
+
+
+/* Section 3: DOM Manipulation & Events End */
