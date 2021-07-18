@@ -6,20 +6,20 @@ console.log(123);
 console.log(true);
 var greeting = 'Hello';
 console.log(greeting);
-console.log([1,2,3,4]); // array
-console.log({a:1, b:2}); // object
-console.table({a:1, b:2}); // console.table(object)
+console.log([1, 2, 3, 4]); // array
+console.log({ a: 1, b: 2 }); // object
+console.table({ a: 1, b: 2 }); // console.table(object)
 
 console.error('This is some error');
 console.clear();
 console.warn('This is a warning');
 console.time('Hello');
-  console.log('Hello World');
-  console.log('Hello World');
-  console.log('Hello World');
-  console.log('Hello World');
-  console.log('Hello World');
-  console.log('Hello World');
+console.log('Hello World');
+console.log('Hello World');
+console.log('Hello World');
+console.log('Hello World');
+console.log('Hello World');
+console.log('Hello World');
 console.timeEnd('Hello');
 /*
   multi
@@ -69,8 +69,8 @@ console.timeEnd('Hello');
 // const greeting;
 
 const person = {
-  name: 'John',
-  age: 30
+    name: 'John',
+    age: 30
 }
 
 person.name = 'Sara';
@@ -78,7 +78,7 @@ person.age = 32;
 
 // console.log(person);
 
-const numbers = [1,2,3,4,5];
+const numbers = [1, 2, 3, 4, 5];
 numbers.push(6);
 
 console.log(numbers);
@@ -105,8 +105,8 @@ const sym = Symbol();
 const hobbies = ['movies', 'music'];
 // Object literal
 const address = {
-  city: 'Boston',
-  state: 'MA'
+    city: 'Boston',
+    state: 'MA'
 }
 const today = new Date();
 console.log(today);
@@ -117,13 +117,13 @@ let val;
 
 // Number to string
 val = String(555);
-val = String(4+4);
+val = String(4 + 4);
 // Bool to string
 val = String(true);
 // Date to string
 val = String(new Date());
 // Array to string
-val = String([1,2,3,4]);
+val = String([1, 2, 3, 4]);
 
 // toString()
 val = (5).toString();
@@ -135,7 +135,7 @@ val = Number(true);
 val = Number(false);
 val = Number(null);
 val = Number('hello');
-val = Number([1,2,3]);
+val = Number([1, 2, 3]);
 
 val = parseInt('100.30');
 val = parseFloat('100.30');
@@ -176,8 +176,8 @@ val = Math.floor(2.8);
 val = Math.sqrt(64);
 val = Math.abs(-3);
 val = Math.pow(8, 2);
-val = Math.min(2,33,4,1,55,6,3,-2);
-val = Math.max(2,33,4,1,55,6,3,-2);
+val = Math.min(2, 33, 4, 1, 55, 6, 3, -2);
+val = Math.max(2, 33, 4, 1, 55, 6, 3, -2);
 val = Math.random();
 
 val = Math.floor(Math.random() * 20 + 1);
@@ -207,7 +207,7 @@ val += 'Traversy';
 val = 'Hello, my name is ' + firstName + ' and I am ' + age;
 
 // Escaping
-val =  'That\'s awesome, I can\'t wait';
+val = 'That\'s awesome, I can\'t wait';
 
 // Length
 val = firstName.length;
@@ -234,7 +234,7 @@ val = firstName.charAt(firstName.length - 1); //entire length minus 1
 val = firstName.substring(0, 4); // pull a substring out of a string
 
 // slice()
-val = firstName.slice(0,4); // does the same as above but is mostly used with arrays
+val = firstName.slice(0, 4); // does the same as above but is mostly used with arrays
 val = firstName.slice(-3); // used to pull out things from the array (-3 characters from the back)
 
 // split()
@@ -257,17 +257,17 @@ const city = 'Miami';
 let html;
 
 // Without template strings (es5)
-html = '<ul><li>Name: ' + name + '</li><li>Age: ' + age + ' </li><li>Job: '+ job+ ' </li><li>City: '+ city +' </li></ul>';
+html = '<ul><li>Name: ' + name + '</li><li>Age: ' + age + ' </li><li>Job: ' + job + ' </li><li>City: ' + city + ' </li></ul>';
 
 html = '<ul>' +
-       '<li>Name: ' + name + '</li>' +
-       '<li>Age: ' + age + '</li>' +
-       '<li>Job: ' + job + '</li>' +
-       '<li>City: ' + city + '</li>' +
-       '</ul>';
+    '<li>Name: ' + name + '</li>' +
+    '<li>Age: ' + age + '</li>' +
+    '<li>Job: ' + job + '</li>' +
+    '<li>City: ' + city + '</li>' +
+    '</ul>';
 
-function hello(){
-  return 'hello';
+function hello() {
+    return 'hello';
 }
 
 // With template strings (es6)
@@ -287,10 +287,10 @@ document.body.innerHTML = html;
 
 // ARRAYS AND ARRAY METHODS
 // Create some arrays
-const numbers = [43,56,33,23,44,36,5]; // way one: of creating an array
-const numbers2 = new Array(22,45,33,76,54); // way two: using the array constructor
+const numbers = [43, 56, 33, 23, 44, 36, 5]; // way one: of creating an array
+const numbers2 = new Array(22, 45, 33, 76, 54); // way two: using the array constructor
 const fruit = ['Apple', 'Banana', 'Orange', 'Pear']; // an array of strings
-const mixed = [22, 'Hello', true, undefined, null, {a:1, b:1}, new Date()];
+const mixed = [22, 'Hello', true, undefined, null, { a: 1, b: 1 }, new Date()];
 
 let val;
 
@@ -341,8 +341,8 @@ val = fruit.sort(); // alphabetical order
 // });
 
 // Find the first number under 50
-function over50(num){
-  return num > 50;
+function over50(num) {
+    return num > 50;
 }
 
 val = numbers.find(over50); // find the first number over 50
@@ -353,18 +353,18 @@ console.log(val);
 // OBJECT LITERALS
 
 const person = {
-  firstName: 'Steve',
-  lastName: 'Smith',
-  age: 36,
-  email: 'steve@aol.com',
-  hobbies: ['music', 'sports'],
-  address: {
-    city: 'Miami',
-    state: 'FL'
-  },
-  getBirthYear: function(){
-	  return 2017 - this.age; // when you are inside an object, use 'this' to mean a value in this very object. Without it in the object it just wont work.
-  }
+    firstName: 'Steve',
+    lastName: 'Smith',
+    age: 36,
+    email: 'steve@aol.com',
+    hobbies: ['music', 'sports'],
+    address: {
+        city: 'Miami',
+        state: 'FL'
+    },
+    getBirthYear: function() {
+        return 2017 - this.age; // when you are inside an object, use 'this' to mean a value in this very object. Without it in the object it just wont work.
+    }
 }
 
 let val;
@@ -382,13 +382,13 @@ val = person.getBirthYear();
 console.log(val);
 
 const people = [
-  {name: 'John', age: 30},
-  {name: 'Mike', age: 23},
-  {name: 'Nancy', age: 40}
+    { name: 'John', age: 30 },
+    { name: 'Mike', age: 23 },
+    { name: 'Nancy', age: 40 }
 ];
 
-for(let i = 0; i < people.length; i++){
-  console.log(people[i].name);
+for (let i = 0; i < people.length; i++) {
+    console.log(people[i].name);
 }
 
 
@@ -498,34 +498,34 @@ const name = 'Steve';
 const age = 70;
 
 // AND &&
-if(age > 0 && age < 12){
-  console.log(`${name} is a child`);
-} else if(age >= 13 && age <= 19){
-  console.log(`${name} is a teenager`);
+if (age > 0 && age < 12) {
+    console.log(`${name} is a child`);
+} else if (age >= 13 && age <= 19) {
+    console.log(`${name} is a teenager`);
 } else {
-  console.log(`${name} is an adult`);
+    console.log(`${name} is an adult`);
 }
 
 // OR ||
-if(age < 16 || age > 65){
-  console.log(`${name} can not run in race`);
+if (age < 16 || age > 65) {
+    console.log(`${name} can not run in race`);
 } else {
-  console.log(`${name} is registered for the race`);
+    console.log(`${name} is registered for the race`);
 }
 
 // TERNARY OPERATOR
 console.log(id === 100 ? 'CORRECT' : 'INCORRECT');
 
 // WITHOUT BRACES
-if(id === 100)
-  console.log('CORRECT');
+if (id === 100)
+    console.log('CORRECT');
 else
-  console.log('INCORRECT');
+    console.log('INCORRECT');
 
-if(id === 100)
-  console.log('CORRECT');
+if (id === 100)
+    console.log('CORRECT');
 else
-  console.log('INCORRECT');
+    console.log('INCORRECT');
 
 // IF STATEMENTS AND COMPARISON OPERATORS END
 
@@ -535,42 +535,42 @@ else
 
 const color = 'yellow';
 
-switch(color){
-  case 'red':
-    console.log('Color is red');
-    break;
-  case 'blue':
-    console.log('Color is blue');
-    break;
-  default:
-    console.log('Color is not red or blue');
-    break;
+switch (color) {
+    case 'red':
+        console.log('Color is red');
+        break;
+    case 'blue':
+        console.log('Color is blue');
+        break;
+    default:
+        console.log('Color is not red or blue');
+        break;
 }
 
 let day;
 
-switch(new Date().getDay()){
-  case 0:
-    day = 'Sunday';
-    break;
-  case 1:
-    day = 'Monday';
-    break;
-  case 2:
-    day = 'Tuesday';
-    break;
-  case 3:
-    day = 'Wednesday';
-    break;
-  case 4:
-    day = 'Thursday';
-    break;
-  case 5:
-    day = 'Friday';
-    break;
-  case 6:
-    day = 'Saturday';
-    break;
+switch (new Date().getDay()) {
+    case 0:
+        day = 'Sunday';
+        break;
+    case 1:
+        day = 'Monday';
+        break;
+    case 2:
+        day = 'Tuesday';
+        break;
+    case 3:
+        day = 'Wednesday';
+        break;
+    case 4:
+        day = 'Thursday';
+        break;
+    case 5:
+        day = 'Friday';
+        break;
+    case 6:
+        day = 'Saturday';
+        break;
 }
 
 console.log(`Today is ${day}`);
@@ -582,19 +582,19 @@ console.log(`Today is ${day}`);
 
 // 1. FUNCTION DECLARATIONS AND EXPRESSIONS
 
-function greet(firstName = 'John', lastName = 'Doe'){
-  // if(typeof firstName === 'undefined'){firstName = 'John'}
-  // if(typeof lastName === 'undefined'){lastName = 'Doe'}
-  //console.log('Hello');
-  return 'Hello ' + firstName + ' ' + lastName;
+function greet(firstName = 'John', lastName = 'Doe') {
+    // if(typeof firstName === 'undefined'){firstName = 'John'}
+    // if(typeof lastName === 'undefined'){lastName = 'Doe'}
+    //console.log('Hello');
+    return 'Hello ' + firstName + ' ' + lastName;
 }
 
 // console.log(greet());
 
 // 2. FUNCTION EXPRESIONS - placing a function in a variable
 
-const square = function(x = 3){ // here you have a name variable 'square' and an anonymous function
-  return x*x;
+const square = function(x = 3) { // here you have a name variable 'square' and an anonymous function
+    return x * x;
 }; // add a semi colon because this is basically a variable
 
 // console.log(square()); // answer is 9
@@ -607,31 +607,31 @@ const square = function(x = 3){ // here you have a name variable 'square' and an
 //we simply define an anonymous function inside parenthesis
 
 
- (function(){
-   console.log('IIFE Ran..');
- })();
+(function() {
+    console.log('IIFE Ran..');
+})();
 
 // very useful in certain design patterns for example module patterns
- (function(name){
-   console.log('Hello '+ name);
- })('Brad');
+(function(name) {
+    console.log('Hello ' + name);
+})('Brad');
 
 
 // We can also put functions inside of objects. We then call them methods and not functions
 // PROPERTY METHODS
 
 const todo = {
-  add: function(){
-    console.log('Add todo..');
-  },
-  edit: function(id){
-    console.log(`Edit todo ${id}`);
-  }
+    add: function() {
+        console.log('Add todo..');
+    },
+    edit: function(id) {
+        console.log(`Edit todo ${id}`);
+    }
 }
 
 // ad a method to the todo oject from outside of the object
-todo.delete = function(){
-  console.log('Delete todo...');
+todo.delete = function() {
+    console.log('Delete todo...');
 }
 
 todo.add();
@@ -683,7 +683,7 @@ todo.delete();
 // }
 
 // while(i < 10);
- 
+
 
 // 4. LOOP THROUGH ARRAY
 const cars = ['Ford', 'Chevy', 'Honda', 'Toyota'];
@@ -693,9 +693,9 @@ const cars = ['Ford', 'Chevy', 'Honda', 'Toyota'];
 // }
 
 //5.  FOREACH - takes in an anonymous function
- 
- /* Always use forEach() to loop through arrays */
- 
+
+/* Always use forEach() to loop through arrays */
+
 /* 
 // cars.forEach(function(){...})
 
@@ -728,17 +728,17 @@ const cars = ['Ford', 'Chevy', 'Honda', 'Toyota'];
 
 // 7. FOR IN LOOP - often used in objects
 const user = {
-  firstName: 'John', 
-  lastName: 'Doe',
-  age: 40
+    firstName: 'John',
+    lastName: 'Doe',
+    age: 40
 }
 
-for(let x in user){
-	console.log(x); // x will give us the key
+for (let x in user) {
+    console.log(x); // x will give us the key
 }
 
-for(let x in user){
-	console.log(`${x} : ${user[x]}`); //we'll then get the key and the value - key value pairs
+for (let x in user) {
+    console.log(`${x} : ${user[x]}`); //we'll then get the key and the value - key value pairs
 }
 
 // GENERAL LOOPS - ITERATION END
@@ -755,7 +755,7 @@ for(let x in user){
 	 - LocalStorage, The Fetch API, the Navigator which includes geolocation.
 	 - includes methods like alert, prompt and confirm and so much more 
 
-*/ 
+*/
 
 // Alert
 //alert('Hello World');
@@ -827,13 +827,16 @@ console.log(val);
 
 
 
-/* GLOBAL SCOPE */ 
+/* GLOBAL SCOPE WITH 'let' AND 'const'
+
+  Why 'var' should not be used */
+
 var a = 1;
 let b = 2;
 const c = 3;
 
 // function test() {
-	/* these variables are in the function scope */
+/* these variables are in the function scope */
 //   var a = 4;
 //   let b = 5;
 //   const c = 6;
@@ -844,7 +847,7 @@ const c = 3;
 
 // if(true) {
 //   // Block Scope
-	//   var a = 4; // this value changes 
+//   var a = 4; // this value changes the a in the global scope. The let and const variables don't.
 //   let b = 5;
 //   const c = 6;
 //   console.log('If Scope: ', a, b, c);
